@@ -57,6 +57,7 @@ dockers:
       - "--platform=darwin/arm64"
     goos: darwin
     goarch: arm64
+    use: buildx
   - image_templates:
       - 'ghcr.io/{{.Env.GIT_OWNER}}/kubeconform:latest-arm64-alpine'
       - 'ghcr.io/{{.Env.GIT_OWNER}}/kubeconform:{{ .Tag }}-arm64-alpine'
@@ -65,6 +66,7 @@ dockers:
       - "--platform=darwin/arm64"
     goos: darwin
     goarch: arm64
+    use: buildx
 
 checksum:
   name_template: 'CHECKSUMS'
